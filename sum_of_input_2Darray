@@ -1,0 +1,21 @@
+static void sum_array(){
+int []arr;
+arr= new int[5];
+int i, j ;
+i=0;
+int v;
+int sum=0;
+while(i<5){
+Console.WriteLine("The {0}th array : ", i)
+v= int.Parse(Console.ReadLine());
+arr[i]=v;
+i++;
+}
+
+j=0;
+while(j<5){
+sum+=arr[j];
+j++;
+}
+Console.WriteLine("the sum of array : {0}", sum);
+}
