@@ -1,0 +1,10 @@
+static void sum_array(){
+int sum=0;
+int []arr= {14, 12, 34, 25, 87};
+int i =0;
+while(i<5){
+sum+=arr[i];
+i++;
+}
+Console.WriteLine("the sium of array : {0}", sum);
+}

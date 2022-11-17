@@ -1,0 +1,31 @@
+static void digit_prime()
+        {
+            int num, rem, prime, i;
+            prime = 0;
+            Console.WriteLine("Enter any no : ");
+            num = int.Parse(Console.ReadLine());
+            while (num > 0)
+            {
+
+                rem = num % 10;
+                bool flag = true;
+                if (rem == 0)
+                    flag = false;
+                i = 2;
+
+                while (i <= rem / 2)
+                {
+                    if (rem % i == 0)
+                    {
+                        flag = false;
+                        break;
+                    }
+                    i++;
+                }
+                if (flag == true)
+                    prime++;
+
+                num = num / 10;
+            }
+            Console.WriteLine("total prime is {0}", prime);
+        }

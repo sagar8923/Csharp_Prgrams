@@ -1,0 +1,40 @@
+ static void Array_column_input_sum()
+        {
+            int i, j, row, column, v;
+            Console.WriteLine("enter row size : ");
+            row = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter column size : ");
+            column = int.Parse(Console.ReadLine());
+            int[,] arr = new int[row, column];
+            i = 0;
+            while (i < row)
+            {
+                j = 0;
+                while (j < column)
+                {
+                    Console.Write("enter value : ");
+                    v = int.Parse(Console.ReadLine());
+                    arr[i,j] = v;
+                    j++;
+                }
+                Console.WriteLine();
+                i++;
+            }
+            int column_sum;
+            int a, b;
+            a = 0;
+            while (a < row)
+            {
+                b = 0;
+                column_sum = 0;
+                while (b < column)
+                {
+                    column_sum += arr[b,a];
+
+                    b++;
+                }
+
+                Console.Write("  {0}th colum sum ={1}  ", a, column_sum);
+                a++;
+            }
+        }

@@ -1,0 +1,56 @@
+static void array_2d_diagonal2_evenorodd()
+        {
+            int row, column, v;
+            Console.WriteLine("enter row size : ");
+            row = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter column size : ");
+            column = int.Parse(Console.ReadLine());
+            int[,] arr = new int[row, column];
+            int i, j;
+            i = 0;
+            while (i < row)
+            {
+                j = 0;
+                while (j < column)
+                {
+                    if (i+ j==2)
+                    {
+                        Console.WriteLine("enter value :");
+                        v = int.Parse(Console.ReadLine());
+                        arr[i, j] = v;
+                    }
+                  //  Console.WriteLine();
+                    j++;
+                }
+                Console.ReadLine();
+                i++;
+            }
+
+            int a, b,even, odd;
+
+            a = 0;
+	    even=0;
+	    odd=0;
+            while (a < row)
+            {
+                b = 0;
+
+
+                while (b < column)
+                {
+                    if (a+ b==2){
+                        if(arr[a, b]%2==0)
+			even++;
+		    else
+			odd++;
+		   }
+		
+                    else
+                        Console.Write("  ");
+                    b++;
+                }
+
+                Console.WriteLine();
+                a++;
+            }
+        }

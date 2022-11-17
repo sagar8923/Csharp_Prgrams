@@ -1,0 +1,21 @@
+static void Array_column_sum()
+        {
+            int[,] arr = { { 5, 3, 8 }, { 1, 4, 0 }, { 2, 6, 5 } };
+
+
+            int a, b;
+            a = 0;
+            while (a < 3)
+            {
+                b = 0;
+                int column_sum = 0;
+
+                while (b < 3)
+                {
+                    column_sum += arr[b, a];
+                    b++;
+                }
+                Console.Write("   {0}th colum sum = {1}    ", a + 1, column_sum);
+                a++;
+            }
+        }

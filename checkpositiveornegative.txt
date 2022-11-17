@@ -1,0 +1,31 @@
+static void array_posorneg(){
+int i, j, k;
+int temp;
+
+int even, odd ;
+Console.WriteLine("enter the size of array : ");
+ i = int.Parse(Console.ReadLine());
+int []arr=new int[i];
+j =0;
+while(j<i){
+Console.WriteLine("Enter the {0}th array : ", j+1);
+temp = int.Parse(Console.ReadLine());
+arr[j] = temp;
+j++;
+}
+
+
+k = 0;
+while(k<i){
+if(arr[k]%2==0)
+even++;
+else 
+odd++;
+k++;
+}
+Console.WriteLine(" odds are : {0}", odd);
+Console.WriteLine(" evens are : {0}", even);
+}
+
+
+

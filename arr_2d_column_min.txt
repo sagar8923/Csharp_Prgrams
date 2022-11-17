@@ -1,0 +1,44 @@
+static void array_2d_column_min()
+        {
+            int row, column, v;
+            Console.WriteLine("enter row size : ");
+            row = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter column size : ");
+            column = int.Parse(Console.ReadLine());
+            int[,] arr = new int[row, column];
+            int i, j;
+            i = 0;
+            while (i < row)
+            {
+                j = 0;
+                while (j < column)
+                {
+                    Console.WriteLine("enter value :");
+                    v = int.Parse(Console.ReadLine());
+                    arr[i,j] = v;
+                    j++;
+                }
+                Console.ReadLine();
+                i++;
+            }
+
+            int a, b, Min;
+            
+            a = 0;
+            while (a < row)
+            {
+                b = 0;
+		Max= arr[0,a];
+
+                while (b < column) 
+                {
+                    if (arr[b, a] < Min)
+                        Min = arr[b,a];
+                    b++;
+                }
+
+
+            	Console.WriteLine("Minimum value at {0}th column ={1}", a+1, Min);
+                a++;
+            }
+        }

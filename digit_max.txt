@@ -1,0 +1,11 @@
+int num;
+int rem;
+int Max=0;
+Console.WriteLine("Enter any NO : ");
+num = int.parse(Console.ReadLine());
+while(num>0){
+rem = num%10;
+if(rem>Max)
+Max = rem;
+num = num/10;
+}

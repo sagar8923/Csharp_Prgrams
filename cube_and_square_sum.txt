@@ -1,0 +1,35 @@
+
+ static void digit_square_sum()
+        {
+            int num;
+            int rem;
+            int Square_sum = 0;
+            Console.WriteLine("Enter any NO : ");
+            num = int.Parse(Console.ReadLine());
+            while (num > 0)
+            {
+                rem = num % 10;
+                Square_sum += rem * rem;
+                
+                num = num / 10;
+            }
+            Console.WriteLine("Square sum is {0}", Square_sum);
+
+        }
+        static void digit_cube_sum()
+        {
+            int num;
+            int rem;
+            int cube_sum = 0;
+            Console.WriteLine("Enter any NO : ");
+            num = int.Parse(Console.ReadLine());
+            while (num > 0)
+            {
+                rem = num % 10;
+                cube_sum += rem * rem* rem;
+
+                num = num / 10;
+            }
+            Console.WriteLine("cube sum is {0}", cube_sum);
+
+        }

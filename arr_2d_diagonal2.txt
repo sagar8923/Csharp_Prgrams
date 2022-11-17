@@ -1,0 +1,49 @@
+static void array_2d_diagonal2()
+        {
+            int row, column, v;
+            Console.WriteLine("enter row size : ");
+            row = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter column size : ");
+            column = int.Parse(Console.ReadLine());
+            int[,] arr = new int[row, column];
+            int i, j;
+            i = 0;
+            while (i < row)
+            {
+                j = 0;
+                while (j < column)
+                {
+                    if (i+ j==2)
+                    {
+                        Console.WriteLine("enter value :");
+                        v = int.Parse(Console.ReadLine());
+                        arr[i, j] = v;
+                    }
+                  //  Console.WriteLine();
+                    j++;
+                }
+                Console.ReadLine();
+                i++;
+            }
+
+            int a, b;
+
+            a = 0;
+            while (a < row)
+            {
+                b = 0;
+
+
+                while (b < column)
+                {
+                    if (a+ b==2)
+                        Console.Write(arr[a, b] + "  ");
+                    else
+                        Console.Write("  ");
+                    b++;
+                }
+
+                Console.WriteLine();
+                a++;
+            }
+        }

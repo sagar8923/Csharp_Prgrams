@@ -1,0 +1,15 @@
+ 
+digit_Min(){
+int num;
+int rem;
+int Min=num%10;
+Console.WriteLine("Enter any no : ");
+num= int.Parse(Console.ReadLine());
+while(num>0){
+rem = num%10;
+if(rem<Min){
+min=rem;
+num= num/10;
+}
+Console.WriteLine("The Minimum digit is {0}", Min);
+}

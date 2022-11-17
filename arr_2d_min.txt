@@ -1,0 +1,40 @@
+static void array_2d_max()
+        {
+            int row, column, v;
+            Console.WriteLine("enter row size : ");
+            row = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter column size : ");
+            column = int.Parse(Console.ReadLine());
+            int[,] arr = new int[row, column];
+            int i, j;
+            i = 0;
+            while (i < row)
+            {
+                j = 0;
+                while (j < column)
+                {
+                    Console.WriteLine("enter value :");
+                    v = int.Parse(Console.ReadLine());
+                    arr[i,j] = v;
+                    j++;
+                }
+                Console.ReadLine();
+                i++;
+            }
+
+            int a, b, Min;
+            Min = arr[0,0];
+            a = 0;
+            while (a < row)
+            {
+                b = 0;
+                while (b < column)
+                {
+                    if (arr[a, b] < Max)
+                        Min = arr[a,b];
+                    b++;
+                }
+                a++;
+            }
+            Console.WriteLine("Minimum value ={0}", Min);
+        }
